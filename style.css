@@ -8,3 +8,14 @@ body {
     background-color: rgb(32, 35, 218);
 }
 
+h1{
+    color: black;
+}
+
+p{
+    color: rgb(255, 135, 6);
+}
+
+.p-color{
+    color: rgb(47, 255, 0);
+}
