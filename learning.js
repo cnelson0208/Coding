@@ -17,3 +17,12 @@ y=2
     let y = 3; console.log(y);
 }
 
+let cl = console.log;
+cl("Hello World!");
+
+for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    }
+
+    
+}
