@@ -19,10 +19,3 @@ y=2
 
 let cl = console.log;
 cl("Hello World!");
-
-for (let index = 0; index < array.length; index++) {
-    const element = array[index];
-    }
-
-    
-}
