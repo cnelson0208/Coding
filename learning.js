@@ -11,3 +11,9 @@ console.log (name + "Chance" );
 console.log("843-901-3543");
 console.log(843-901-3543); 
 
+let y = 1;
+y=2
+{
+    let y = 3; console.log(y);
+}
+
