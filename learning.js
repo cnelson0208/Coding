@@ -20,9 +20,24 @@ y=2
 let cl = console.log;
 cl("Hello World!");
 
-let branches = "#";
+let branches = "#"
 
-for (let index = 0; index < 8; index++) {
-   console.log("8");
+
+
+
+ for (let index = 0; index < 7; index++) { 
+  
+     console.log(branches); 
+    }
+    
+
+        
+   
+        
+        
+    
+        
+for (let index = 0; index < 1; index++) {
+    console.log(branches);
     
 }
