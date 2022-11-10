@@ -20,14 +20,16 @@ y=2
 let cl = console.log;
 cl("Hello World!");
 
-let branches = ""
-
-for (let index = 0; index < 7; index++) {
-     branches += "#";
-    console.log(branches);
+let myname = "Chance"
+for (let index = 0; index < myname.length; index++) {
+    const letter = myname[index];
+    console.log(letter);
     
 }
 
 
-  console.log("#");
     
+for (let index = 1; index < 101; index++) { 
+    console.log(index); 
+    
+}
