@@ -20,15 +20,14 @@ y=2
 let cl = console.log;
 cl("Hello World!");
 
-let branches = "#"
+let branches = ""
 
-for (let index = 0; index < array.length; index++) {
+for (let index = 0; index < 7; index++) {
+     branches += "#";
     console.log(branches);
     
 }
 
 
-for (let index = 0; index < 1; index++) {
-    console.log(branches);
+  console.log("#");
     
-}
