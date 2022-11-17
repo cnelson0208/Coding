@@ -43,3 +43,11 @@ for (let index = 1; index < 101; index++) {
     
     
 }
+
+let myObject= {};
+let o = {};
+o.name = "Nathan";
+o.age = 100;
+cl(o);
+
+    
