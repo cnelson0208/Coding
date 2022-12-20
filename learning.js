@@ -46,8 +46,18 @@ for (let index = 1; index < 101; index++) {
 
 let myObject= {};
 let o = {};
-o.name = "Nathan";
-o.age = 100;
+o.name = "Chance";
+o.age = 15;console.log
 cl(o);
 
-print ("Hello")
+console.log("Hello from JavaScript!");
+console.log("Let's do some math");
+console.log(4 + 7);
+console.log(12 / 0);
+console.log("Goodbye!");
+
+cl (6 - 3);
+cl (6 + 3);
+cl (6 / 3); 
+cl (6 * 3)
+
