@@ -61,3 +61,23 @@ cl (6 + 3);
 cl (6 / 3); 
 cl (6 * 3)
 
+let pie;
+pie = 3.14;
+console.log(pie);
+
+let a = 2;
+a -= 1;
+a++;
+let b = 8;
+b += 2;
+const c = a + b * b;
+const d = a * b + b;
+const e = a * (b + b);
+const f = a * b / a;
+const g = b / a * a;
+console.log(a, b, c, d, e, f, g);
+
+let number1 = 5;
+let number2 = 3;
+cl (number1); 
+cl (number2); 
