@@ -49,5 +49,3 @@ let o = {};
 o.name = "Nathan";
 o.age = 100;
 cl(o);
-
-    
