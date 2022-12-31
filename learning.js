@@ -81,3 +81,33 @@ let number1 = 5;
 let number2 = 3;
 cl (number1); 
 cl (number2); 
+
+console.log(4 + 5);
+console.log("4 + 5");
+console.log("4" + "5");
+
+
+for (let index = 1; index <= 5; index++) {
+    console.log(index);
+    index++; 
+    }
+
+
+    for (let index = 1; index <= 5; index++) {
+        console.log(index);
+        index++; 
+        }
+
+    
+    for (let index = 1; index <= 10; index++) {
+    if (index % 2 === 0) {
+    console.log(`${index} is even`);
+    }
+    }
+    
+    function sayHello(firstName, lastName) {
+        const message = `Hello, ${firstName} ${lastName}!`;
+        return message;
+        }
+    
+    
