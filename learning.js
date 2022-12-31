@@ -103,11 +103,4 @@ for (let index = 1; index <= 5; index++) {
     if (index % 2 === 0) {
     console.log(`${index} is even`);
     }
-    }
-    
-    function sayHello(firstName, lastName) {
-        const message = `Hello, ${firstName} ${lastName}!`;
-        return message;
-        }
-    
-    
+    } 
