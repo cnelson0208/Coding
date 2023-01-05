@@ -20,6 +20,10 @@ y=2
 let cl = console.log;
 cl("Hello World!");
 
+
+
+
+
 let myname = "Chance"
 for (let index = 0; index < myname.length; index++) {
     const letter = myname[index];
