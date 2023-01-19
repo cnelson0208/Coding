@@ -15,3 +15,5 @@ cl( randomNumber(1, 1000) );
 let myGames = ['Arma', 'Insurgency'];
 let games = myGames[Math.floor(Math.random() * myGames.length)];
 cl(games);
+
+
