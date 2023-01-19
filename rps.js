@@ -38,8 +38,6 @@ let getRandomRPS = function () {
   };
   
 
-
-
 //connect the game
 let computerInput = getRandomRPS();
 let userInput = getUserInput();
