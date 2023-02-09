@@ -77,4 +77,23 @@ let dealCard = function (deck) {
   let card = deck.splice(index, 1)[0];
   return card;
 };
+
+let createPlayer = function (player1) {
+  return {
+    name: player1,
+    hand: dealHand(deck),
+    wins: 0,
+  };
+};
+
+let createPlayer2 = function (player2) {
+  return {
+    name: player2,
+    hand: dealHand(deck),
+    wins: 0,
+  };
+};
+
 console.table(dealHand(deck));
+console.log(createPlayer("CPU 1"));
+console.log(createPlayer2("CPU 2"));
