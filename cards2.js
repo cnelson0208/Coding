@@ -22,24 +22,6 @@ let createCard = function (rank, suit) {
 
 let getName = function (rank) {
   switch (rank) {
-    case 2:
-      return "2";
-    case 3:
-      return "3";
-    case 4:
-      return "4";
-    case 5:
-      return "5";
-    case 6:
-      return "6";
-    case 7:
-      return "7";
-    case 8:
-      return "8";
-    case 9:
-      return "9";
-    case 10:
-      return "10";
     case 11:
       return "Jack";
     case 12:
@@ -64,7 +46,13 @@ let deck = buildDeck();
 console.table(deck);
 
 let dealHand = function (deck) {
-  return [dealCard(deck), dealCard(deck), dealCard(deck)];
+  return [
+    dealCard(deck),
+    dealCard(deck),
+    dealCard(deck),
+    dealCard(deck),
+    dealCard(deck),
+  ];
 };
 
 let dealCard = function (deck) {
@@ -100,105 +88,12 @@ console.log(
   `${player2.name} has a ${player2.hand[0].name} of ${player2.hand[0].suit}`
 );
 
-let getWinner = function (player1, player2) {
-  if (player1 === player2) {
-    return "tie";
-  } else if (
-    (player1 === "Ace" && player2 === "King") ||
-    (player1 === "Ace" && player2 === "Queen") ||
-    (player1 === "Ace" && player2 === "Jack") ||
-    (player1 === "Ace" && player2 === "10") ||
-    (player1 === "Ace" && player2 === "9") ||
-    (player1 === "Ace" && player2 === "8") ||
-    (player1 === "Ace" && player2 === "7") ||
-    (player1 === "Ace" && player2 === "6") ||
-    (player1 === "Ace" && player2 === "5") ||
-    (player1 === "Ace" && player2 === "4") ||
-    (player1 === "Ace" && player2 === "3") ||
-    (player1 === "Ace" && player2 === "2") ||
-    (player1 === "King" && player2 === "Queen") ||
-    (player1 === "King" && player2 === "Jack") ||
-    (player1 === "King" && player2 === "10") ||
-    (player1 === "King" && player2 === "9") ||
-    (player1 === "King" && player2 === "8") ||
-    (player1 === "King" && player2 === "7") ||
-    (player1 === "King" && player2 === "6") ||
-    (player1 === "King" && player2 === "5") ||
-    (player1 === "King" && player2 === "4") ||
-    (player1 === "King" && player2 === "3") ||
-    (player1 === "King" && player2 === "2") ||
-    (player1 === "King" && player2 === "1") ||
-    (player1 === "Queen" && player2 === "Jack") ||
-    (player1 === "Queen" && player2 === "10") ||
-    (player1 === "Queen" && player2 === "9") ||
-    (player1 === "Queen" && player2 === "8") ||
-    (player1 === "Queen" && player2 === "7") ||
-    (player1 === "Queen" && player2 === "6") ||
-    (player1 === "Queen" && player2 === "5") ||
-    (player1 === "Queen" && player2 === "4") ||
-    (player1 === "Queen" && player2 === "3") ||
-    (player1 === "Queen" && player2 === "2") ||
-    (player1 === "Jack" && player2 === "10") ||
-    (player1 === "Jack" && player2 === "9") ||
-    (player1 === "Jack" && player2 === "8") ||
-    (player1 === "Jack" && player2 === "7") ||
-    (player1 === "Jack" && player2 === "6") ||
-    (player1 === "Jack" && player2 === "5") ||
-    (player1 === "Jack" && player2 === "4") ||
-    (player1 === "Jack" && player2 === "3") ||
-    (player1 === "Jack" && player2 === "2") ||
-    (player1 === "10" && player2 === "9") ||
-    (player1 === "10" && player2 === "8") ||
-    (player1 === "10" && player2 === "7") ||
-    (player1 === "10" && player2 === "6") ||
-    (player1 === "10" && player2 === "5") ||
-    (player1 === "10" && player2 === "4") ||
-    (player1 === "10" && player2 === "3") ||
-    (player1 === "10" && player2 === "2") ||
-    (player1 === "9" && player2 === "8") ||
-    (player1 === "9" && player2 === "7") ||
-    (player1 === "9" && player2 === "6") ||
-    (player1 === "9" && player2 === "5") ||
-    (player1 === "9" && player2 === "4") ||
-    (player1 === "9" && player2 === "3") ||
-    (player1 === "9" && player2 === "2") ||
-    (player1 === "8" && player2 === "7") ||
-    (player1 === "8" && player2 === "6") ||
-    (player1 === "8" && player2 === "5") ||
-    (player1 === "8" && player2 === "4") ||
-    (player1 === "8" && player2 === "3") ||
-    (player1 === "8" && player2 === "2") ||
-    (player1 === "7" && player2 === "6") ||
-    (player1 === "7" && player2 === "5") ||
-    (player1 === "7" && player2 === "4") ||
-    (player1 === "7" && player2 === "3") ||
-    (player1 === "7" && player2 === "2") ||
-    (player1 === "6" && player2 === "5") ||
-    (player1 === "6" && player2 === "4") ||
-    (player1 === "6" && player2 === "3") ||
-    (player1 === "6" && player2 === "2") ||
-    (player1 === "5" && player2 === "4") ||
-    (player1 === "5" && player2 === "3") ||
-    (player1 === "5" && player2 === "2") ||
-    (player1 === "4" && player2 === "3") ||
-    (player1 === "4" && player2 === "2") ||
-    (player1 === "3" && player2 === "2")
-  ) {
-    return "Chance";
+{
+  if (player1.hand[0].rank > player2.hand[0].rank) {
+    console.log("Chance wins!");
+  } else if (player1.hand[0].rank < player2.hand[0].rank) {
+    console.log("Guest Wins!");
   } else {
-    return "Guest";
+    console.log("tie!");
   }
-};
-
-let congratulate = function (winner) {
-  if (winner === "tie") {
-    cl("Nobody wins.");
-  } else if (winner === "Guest") {
-    cl("Congratulations, Guest!");
-  } else {
-    cl("Congratulations, you are the that GUY!");
-  }
-};
-
-let winner = getWinner(player1, player2);
-congratulate(winner);
+}
