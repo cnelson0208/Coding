@@ -8,14 +8,19 @@
   </head>
   <body>
     
-
-<button id="yesButton">Yes</button>
-<button id="noButton">No</button>
-
-<div id="answers">
-  <p id="yes">You said yes.</p>
-  <p id="no">You said no.</p>
-</div>
+    <h1>Title</h1>
+    <p>Question?</p>
+    
+    <div id="app">
+      <button @click="clickYes()">Yes</button>
+      <button @click="clickNo()">No</button>
+    
+      <div id="answers">
+        <p v-if="showYes">You said yes.</p>
+        <p v-if="showNo">You said no.</p>
+      </div>
+    </div>
+    
 
       
     
