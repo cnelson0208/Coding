@@ -1,8 +1,8 @@
 /// <reference path="lib/p5.global.d.ts" />
 
 class Game {
-  width = 1000;
-  height = 600;
+  width = 1450;
+  height = 730;
   lives = 3;
   points = 0;
   targetRows = 5;
@@ -10,7 +10,7 @@ class Game {
 
   draw() {
     textSize(40);
-    fill("green");
+    fill("white");
     textAlign(LEFT);
     text(this.lives, 10, this.height - 40);
   }
@@ -34,24 +34,41 @@ class Ball {
     this.collideWithTargets();
   }
   collideWithWalls() {
-    if (this.x > game.width) {
-      this.vx = -3;
+    if (this.x + this.size > game.width) {
+      this.vx = -this.vx;
     }
-    if (this.y > game.height) {
+    if (this.y + this.size > game.height) {
       game.lives--;
+      this.vy = -this.vy;
+    }
+    if (this.x < 0) {
+      this.vx = -this.vx;
+    }
+    if (this.y < 0) {
+      this.vy = -this.vy;
     }
   }
+
   collideWithPaddle() {
-    if (this.x > game.width) {
-      this.vx = -3;
-    }
-    if (this.y > game.height) {
-      game.lives--;
+    if (
+      this.y + this.size > paddle.y &&
+      this.x > mouseX - paddle.width / 2 &&
+      this.x < mouseX - paddle.width / 2 + paddle.width
+    ) {
+      this.vy = -this.vy;
     }
   }
 
   collideWithTargets() {
-    for (let i = 0; i < targets.length; i++) targets.splice;
+    for (let i = 0; i < targets.length; i++) {
+      const target = targets[i];
+      if (
+        this.y < targets.y &&
+        this.x > targets.x &&
+        this.x < targets.x + targets.width
+      )
+        targets.splice;
+    }
   }
 }
 
@@ -109,7 +126,7 @@ var setup = function () {
 };
 
 var draw = function () {
-  background(200);
+  background("black");
   game.draw();
   ball.draw();
   paddle.draw();
