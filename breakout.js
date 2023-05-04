@@ -65,9 +65,17 @@ class Ball {
       const target = targets[i];
       if (
         this.y < target.y &&
-        this.x > target.x - this.width &&
+        this.x > target.x &&
         this.x < target.x + target.width
-      );
+      ) {
+        targets.splice(i, 1);
+        this.vy = -this.vy;
+        this.vy = this.vy + this.vy / 14;
+      }
+      if (targets.length === 0) {
+        this.vy = 0;
+        this.vx = 0;
+      }
     }
   }
 }
