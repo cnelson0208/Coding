@@ -25,7 +25,7 @@ class Ball {
     this.size = 20;
   }
   draw() {
-    fill("red");
+    fill("white");
     square(this.x, this.y, this.size);
     this.x += this.vx;
     this.y += this.vy;
@@ -33,6 +33,7 @@ class Ball {
     this.collideWithPaddle();
     this.collideWithTargets();
   }
+
   collideWithWalls() {
     if (this.x + this.size > game.width) {
       this.vx = -this.vx;
@@ -63,9 +64,9 @@ class Ball {
     for (let i = 0; i < targets.length; i++) {
       const target = targets[i];
       if (
-        this.y < targets.y &&
-        this.x > targets.x &&
-        this.x < targets.x + targets.width
+        this.y < target.y &&
+        this.x > target.x &&
+        this.x < target.x + target.width
       )
         targets.splice;
     }
@@ -80,7 +81,7 @@ class Paddle {
     this.height = 10;
   }
   draw() {
-    fill("white");
+    fill("#B026FF");
     noStroke();
     rect(mouseX - this.width / 2, this.y, this.width, this.height);
   }
@@ -96,7 +97,7 @@ class Target {
     this.y = (100 / game.targetRows) * col + 20;
   }
   draw() {
-    fill("blue");
+    fill("#B026FF");
     strokeWeight(2);
     stroke("white");
     rect(this.x, this.y, this.width, this.height);
